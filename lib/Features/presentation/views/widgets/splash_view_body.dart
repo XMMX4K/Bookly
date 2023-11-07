@@ -7,28 +7,18 @@ class SplashViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        SizedBox(
-          height: 40,
+        Image.asset(
+          AssetsData.kLogo,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Image.asset(
-                '${AssetsData.kLogo}',
-                scale: 0.9,
-              ),
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.search,
-                    color: Colors.white,
-                    size: 32,
-                  ))
-            ],
-          ),
+        const SizedBox(
+          height: 8,
+        ),
+        const Text(
+          'Read Free Books',
+          textAlign: TextAlign.center,
         )
       ],
     );
